@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Laboratory Supplies</title>
+  <meta name="description" content="The Laboratory Supplies — laboratory equipment and chemicals supplier." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0e1117;--card:#111827;--ink:#e5e7eb;--muted:#94a3b8;--accent:#60a5fa;--accent-2:#22d3ee;--ring: rgba(96,165,250,.35);}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0b1020);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(120%) blur(8px);background:rgba(14,17,23,.6);border-bottom:1px solid rgba(255,255,255,.06);}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .nav a.btn{padding:10px 14px;border:1px solid rgba(255,255,255,.1);border-radius:10px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:64px 0 36px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted);font-size:12px}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:14px 0 10px}
+    .lead{color:#cbd5e1;font-size:clamp(14px,1.9vw,18px)}
+    .hero-card{background:radial-gradient(1300px 600px at 20% -10%,rgba(96,165,250,.15),transparent),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .hero ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;padding:0;margin:18px 0 0;list-style:none}
+    .hero li{display:flex;align-items:center;gap:10px;color:#d1d5db}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .button{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:12px 16px;border:none;border-radius:12px;color:black;font-weight:700;box-shadow:0 8px 18px rgba(34,211,238,.25);cursor:pointer}
+    .button.secondary{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--ink)}
+    section{padding:42px 0}
+    h2{font-size:clamp(22px,3vw,30px);margin:0 0 10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0b1324}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.25);color:var(--ink);outline:none}
+    input:focus,textarea:focus{box-shadow:0 0 0 6px var(--ring)}
+    textarea{min-height:140px;resize:vertical}
+    footer{padding:28px 0;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08);margin-top:28px}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .small{font-size:12px}
+    .pill{display:inline-flex;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);color:#7dd3fc}
+    .loc-box{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px dashed rgba(125,211,252,.5);border-radius:10px;background:rgba(2,6,23,.3)}
+    .loc-box input{background:transparent;border:none;padding:0;color:#e2e8f0;width:260px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span style="font-size:20px">✨</span>
+      <span>The Laboratory Supplies</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="#products">Products</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="#gallery">Gallery</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="home">
+    <div>
+      <span class="badge">Laboratory Equipment &amp; Chemicals</span>
+      <h1>Precision supplies for science, quality you can trust.</h1>
+      <p class="lead">
+        The Laboratory Supplies provides certified laboratory equipment and analytical-grade chemicals for education, research, healthcare, and industry.
+        Fast delivery, reliable sourcing, and technical guidance—so your work never slows down.
+      </p>
+      <div class="cta">
+        <a href="#products"><button class="button">Browse Products</button></a>
+        <a href="#contact"><button class="button secondary">Request a Quote</button></a>
+      </div>
+
+      <div style="margin-top:16px">
+        <span class="pill">Your Location</span>
+        <div class="loc-box" title="Edit this field with your city/country">
+          <input id="locationInput" value="Add your location here (e.g., Dubai, UAE)" />
+        </div>
+      </div>
+
+      <ul>
+        <li>✓ Analytical instruments &amp; general labware</li>
+        <li>✓ Reagents &amp; specialty chemicals</li>
+        <li>✓ Installation &amp; after‑sales support</li>
+        <li>✓ Bulk &amp; institutional supply</li>
+      </ul>
+    </div>
+    <div class="hero-card">
+      <img src="assets/hero.svg" alt="Laboratory" style="width:100%;height:260px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)">
+      <p class="muted" style="margin:10px 0 0">High‑purity chemicals and calibrated instruments for consistent results.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p class="muted">
+      We partner with leading manufacturers to deliver compliant, reliable laboratory solutions—covering procurement, installation, and maintenance. Our catalog spans
+      glassware, consumables, benchtop instruments, safety products, and certified chemicals for research and production.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Quality &amp; Compliance</h3>
+        <p class="muted">Instruments and reagents sourced to ISO/ASTM standards with traceable certificates of analysis (COA) when applicable.</p>
+      </div>
+      <div class="card">
+        <h3>Expert Support</h3>
+        <p class="muted">Selection guidance, installation, and post‑purchase service to keep your lab running.</p>
+      </div>
+      <div class="card">
+        <h3>Fast Fulfillment</h3>
+        <p class="muted">Local stock on essentials and optimized logistics for scheduled deliveries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Products &amp; Solutions</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Analytical Instruments</h3>
+        <p class="muted">pH meters, spectrophotometers, balances, centrifuges, incubators, ovens, microscopes.</p>
+      </div>
+      <div class="card">
+        <h3>General Labware</h3>
+        <p class="muted">Beakers, flasks, pipettes, burettes, test tubes, racks, funnels, bottles, cryoware.</p>
+      </div>
+      <div class="card">
+        <h3>Chemicals &amp; Reagents</h3>
+        <p class="muted">Analytical‑grade solvents, acids &amp; bases, buffers, indicators, salts, standards.</p>
+      </div>
+      <div class="card">
+        <h3>Safety &amp; PPE</h3>
+        <p class="muted">Gloves, goggles, lab coats, spill kits, fume hood filters, emergency showers/eyewash.</p>
+      </div>
+      <div class="card">
+        <h3>Services</h3>
+        <p class="muted">Calibration, validation, installation, maintenance, user training.</p>
+      </div>
+      <div class="card">
+        <h3>Custom Orders</h3>
+        <p class="muted">Specialized equipment and made‑to‑order chemical blends upon request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p class="muted">Local images included so everything works offline. Replace any file in <code>/assets</code> with your photos.</p>
+    <div class="gallery">
+      <img src="assets/pipettes.svg" alt="Pipettes and labware">
+      <img src="assets/chemicals.svg" alt="Laboratory chemicals">
+      <img src="assets/microscope.svg" alt="Microscope in laboratory">
+      <img src="assets/instruments.svg" alt="Analytical instruments">
+      <img src="assets/glassware.svg" alt="Glassware on bench">
+      <img src="assets/bottles.svg" alt="Chemical bottles">
+      <img src="assets/tubes.svg" alt="Centrifuge tubes">
+      <img src="assets/hero.svg" alt="Hero image">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="card">
+        <h3>Request a Quote</h3>
+        <p class="muted">Tell us what you need—equipment, chemicals, or services—and we’ll get back to you.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks! This demo form does not send emails. Replace with your email/Google Form.');">
+          <label>Name</label>
+          <input placeholder="Your name" required>
+          <label style="margin-top:10px;display:block">Email</label>
+          <input type="email" placeholder="you@example.com" required>
+          <label style="margin-top:10px;display:block">Message</label>
+          <textarea placeholder="List items, quantities, or questions"></textarea>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <button class="button" type="submit">Send</button>
+            <a class="button secondary" href="#home">Back to top</a>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Business Details</h3>
+        <p class="muted">
+          <strong>The Laboratory Supplies</strong><br>
+          <span id="displayLocation">Location: <em>(set above)</em></span><br>
+          Email: <a href="mailto:info@thelaboratorysupplies.example">info@thelaboratorysupplies.example</a><br>
+          Phone: +971 000 0000
+        </p>
+        <p class="muted small">Tip: Replace the email and phone with your actual details. You can also embed a Google Map here.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="small">
+      © <span id="year"></span> The Laboratory Supplies. All rights reserved.
+    </div>
+    <div class="small">Built with HTML + CSS (single file + local images).</div>
+  </div>
+</footer>
+
+<script>
+  // Sync location input to display field
+  const input = document.getElementById('locationInput');
+  const out = document.getElementById('displayLocation');
+  function syncLoc(){ out.textContent = 'Location: ' + (input.value || '(not set)'); }
+  input.addEventListener('input', syncLoc);
+  syncLoc();
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
